@@ -9,6 +9,7 @@
 , pcsclite
 , openssl
 , lib
+, fetchurl
 }:
 
 stdenv.mkDerivation {
