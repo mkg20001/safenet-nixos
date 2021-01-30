@@ -1,3 +1,3 @@
-self: super: {
-  safenetauthenticationclient = super.callPackage ./package.nix { };
+final: prev: {
+  safenetauthenticationclient = prev.callPackage ./package.nix { };
 }
