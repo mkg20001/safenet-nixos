@@ -46,6 +46,10 @@ stdenv.mkDerivation {
     gappsWrapperArgs+=(--prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [ openssl.out ]}:$out/lib")
   '';
 
+  postFixup = ''
+    sed 's|-a "$0"||g' -i $out/bin/*
+  '';
+
   installPhase = ''
 
     mkdir $out
