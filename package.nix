@@ -74,7 +74,9 @@ stdenv.mkDerivation {
     chmod +x $out/pcsc/drivers/aks-ifdh.bundle/Contents/Linux/libAksIfdh.so.9.0
     ln -f -s libAksIfdh.so.9.0 $out/pcsc/drivers/aks-ifdh.bundle/Contents/Linux/libAksIfdh.so
 
-    # this mess is from postinst
+    chmod +x $out/share/eToken/shortcuts/*.desktop
+
+    ## the following mess is adapted from postinst ##
 
     clink ()
     {
