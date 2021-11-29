@@ -1,6 +1,8 @@
 {
   description = "Safenet Authentication Client for nixOS";
 
+  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+
   outputs = { self, nixpkgs }:
 
     let
